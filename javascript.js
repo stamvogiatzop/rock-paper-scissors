@@ -1,5 +1,20 @@
 console.log("ROCK___PAPER___SCISSORS___FOR ___NOOBS");
 
+
+// FUNCTION FOR ASKING WHETHER YOU WANT TO PLAY OR NOT!!!//
+
+// function playOrNot() {
+//   let yesOrNo = prompt("Wanna Play? Press y or n").toLowerCase();
+
+//   if (yesOrNo === "y") {
+//     alert("Enter with caution...");
+//   } else {
+//     alert("Bye loser...");
+//   }
+// }
+
+// playOrNot();
+
 function getComputerChoice() {
   let numberChoice = Math.floor(Math.random() * 3);
   let computerChoice = "";
@@ -17,25 +32,11 @@ function getComputerChoice() {
   return computerChoice;
 }
 
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
-// STUPID BUG STARTS WITH HUMAN PROMPT
-
-function getHumanChoice() {
-  debugger;
-
-  // PROBABLY HERE THERE IS THE STUPID BUG...
-
-  let humanChoice = prompt("Choose: ROCK, PAPER or SCISSORS?").toLowerCase();
-
-  debugger;
-
-  // MAYBE ALSO HERE
-
-  return humanChoice;
-}
-
-// let humanScore = 0;
-// let computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
   switch (humanChoice === "scissors") {
@@ -56,17 +57,12 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function getHumanChoice() {
 
-function playOrNot() {
-  let yesOrNo = prompt("Wanna Play? Press y or n.").toLowerCase();
+  // PROBABLY HERE THERE IS THE STUPID BUG THAT ALWAYS ACTIVATES THE PROMPT...
 
-  if (yesOrNo === "y") {
-    playRound(humanSelection, computerSelection);
-  } else {
-    alert("Bye loser...");
-  }
+
+  const humanChoice = prompt("Choose: ROCK, PAPER or SCISSORS?").toLowerCase();
+
+  return humanChoice;
 }
-
-playOrNot();

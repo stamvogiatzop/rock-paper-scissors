@@ -48,13 +48,18 @@ function playRound(computerChoice, humanChoice) {
 let humanScore = 0;
 let computerScore = 0;
 
+const loseSound = new Audio('assets/goofy-yell.mp3');
+const winSound = new Audio('assets/excellence.mp3');
+
 function playGame() {
   while (humanScore < 5 && computerScore < 5) {
     playRound(getComputerChoice(), getHumanChoice())
   }
   if (humanScore > computerScore) {
+    winSound.play();
     alert("You won only this time! Worse luck next time...");
   } else if (computerScore > humanScore) {
+    loseSound.play();
     alert("As expected... You lost the game.");
   }
 }
@@ -70,5 +75,8 @@ function playOrNot() {
   }
 }
 
-playOrNot();
+document.getElementById("play-game").addEventListener("click", () => {
+  playOrNot();
+});
+
 console.clear();

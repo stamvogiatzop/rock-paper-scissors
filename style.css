@@ -1,9 +1,43 @@
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
 }
 
 h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: blueviolet;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Play Game Button Styling */
+button#play-game {
+  padding: 15px 30px;
+  font-size: 18px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button#play-game:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button#play-game:active {
+  background-color: #004085; /* Even darker on click */
+  transform: translateY(1px); /* Button pressed effect */
 }

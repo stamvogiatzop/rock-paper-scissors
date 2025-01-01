@@ -1,2 +1,2 @@
-# rock-paper-scissors game
-# open console to play. Later will add GUI.
+# Rock-paper-scissors game
+# Open console to play. Later will add GUI.

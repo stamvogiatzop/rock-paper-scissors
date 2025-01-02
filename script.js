@@ -28,20 +28,29 @@ function playRound(computerChoice, humanChoice) {
     (computerChoice === "scissors" && humanChoice === "rock") ||
     (computerChoice === "paper" && humanChoice === "scissors" )) {
       console.log("Am I right? Did you dare choose " + humanChoice + "?");
+      console.log("CPU chose " + computerChoice + ".");
       console.log("You  win! Choosing " + humanChoice + " beats " + computerChoice + "!");
+      console.log("");
       humanScore++;
       console.log("CPU: " + computerScore + " VS Player: " + humanScore);
+      console.log("");
   } else if ((humanChoice === "rock" && computerChoice === "paper") ||
     (humanChoice === "scissors" && computerChoice === "rock") ||
     (humanChoice === "paper" && computerChoice === "scissors" )) {
-      console.log("Am I right? Did you dare choose " + humanChoice + "?");
+      console.log( "Really? " + humanChoice + "???");
+      console.log("CPU chose " + computerChoice + ".");
       console.log("You  lose, " + computerChoice + " beats " + humanChoice + "...");
+      console.log("");
       computerScore++;
       console.log("CPU: " + computerScore + " VS Player: " + humanScore);
-
+      console.log("");
   } else if (computerChoice === humanChoice) {
-    console.log("Am I right? Did you dare choose " + humanChoice + "?");
+      console.log("Did you dare choose " + humanChoice + "?");
+      console.log("CPU chose " + computerChoice + ".");
       console.log("It\'s a TIE!");
+      console.log("");
+      console.log("CPU: " + computerScore + " VS Player: " + humanScore);
+      console.log("");
   }
 }
 
